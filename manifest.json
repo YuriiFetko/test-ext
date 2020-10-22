@@ -1,0 +1,41 @@
+{
+  "name": "test",
+  "version": "1.0",
+  "description": "test test",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "notifications"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "js/jquery-3.5.1.min.js",
+        "page.js"
+      ],
+      "css": [
+        "page.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Chrome Extension",
+    "default_popup": "options.html"
+  },
+  "options_page": "options.html",
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "images/open.png"
+  ]
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOSKA Chrome Ext options</title>
+    <style>
+        #add.edit-mode .adding {
+            display: none;
+        }
+
+        #add:not(.edit-mode) .editing {
+            display: none;
+        }
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="options.js"></script>
+</head>
+<body>
+<h2>List of excluded word in url</h2>
+<h3 id="status"></h3>
+<input id="exclude" rows="10" cols="30"></textarea>
+
+<input id="saveExclude" type="submit" value="Save"/>
+<input id="resetExclude" type="submit" value="Clear"/>
+
+</body>
+</html>
